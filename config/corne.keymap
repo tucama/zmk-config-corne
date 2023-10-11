@@ -33,9 +33,9 @@
 
         default_colemak_layer {
             bindings = <
-&kp TAB      &kp Q  &kp W  &kp F  &kp P          &kp B             &kp J        &kp L          &kp U      &kp Y         &mt BR_SEMICOLON BR_COLON  &backspace_delete
+&lt 3 TAB      &kp Q  &kp W  &kp F  &kp P          &kp B             &kp J        &kp L          &kp U      &kp Y         &mt BR_SEMICOLON BR_COLON  &backspace_delete
 &kp LCTRL    &kp A  &kp R  &kp S  &kp T          &kp G             &kp M        &kp N          &kp E      &kp I         &kp O                &kp ESC
-&shift_caps  &kp Z  &kp X  &kp C  &kp D          &kp V             &kp K        &kp H          &kp BR_COMMA  &mt BR_EXCL BR_DOT  &mt UNDER BR_SLASH      &to 3
+&shift_caps  &kp Z  &kp X  &kp C  &kp D          &kp V             &kp K        &kp H          &kp BR_COMMA  &mt BR_EXCL BR_DOT  &mt BR_UNDER BR_SLASH      &to 3
                            &to 2  &mt LCTRL ESC  &mt LGUI SPACE    &lt 5 ENTER  &kp RIGHT_ALT  &to 1
             >;
         };
@@ -43,8 +43,8 @@
         lower_colemak_layer {
             bindings = <
 &kp TAB     &kp KP_SUBTRACT  &kp KP_PLUS      &kp KP_MULTIPLY  &kp KP_DIVIDE    &kp KP_EQUAL       &kp C_PLAY_PAUSE  &kp C_PREV     &kp C_NEXT           &trans              &none   &trans
-&kp COMMA   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4    &kp C_REWIND      &kp C_VOL_UP   &mt C_MUTE C_VOL_DN  &kp C_FAST_FORWARD  &trans  &trans
-&kp PERIOD  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9    &trans            &kp C_BRI_INC  &kp C_BRI_DEC        &trans              &trans  &trans
+&kp BR_COMMA   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4    &kp C_REWIND      &kp C_VOL_UP   &mt C_MUTE C_VOL_DN  &kp C_FAST_FORWARD  &trans  &trans
+&kp BR_PERIOD  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9    &trans            &kp C_BRI_INC  &kp C_BRI_DEC        &trans              &trans  &trans
                                               &to 0            &trans           &trans             &trans            &trans         &to 2
             >;
         };
@@ -52,7 +52,7 @@
         raise_colemak_layer {
             bindings = <
 &kp TAB    &kp BR_EXCL  &kp BR_AT     &kp BR_HASH           &kp BR_DLLR  &kp BR_PRCNT    &kp BR_CARET            &kp BR_AMPS          &kp BR_KP_MULTIPLY       &kp BR_LPAR               &kp BR_RPAR           &kp BSPC
-&kp LCTRL  &kp BR_APOS  &kp BR_EQUAL  &kp BR_DOUBLE_QUOTES  &kp BR_PIPE  &trans       &mt HOME BR_LEFT_BRACE &kp BR_LEFT_BRACKET  &kp BR_LEFT_PARENTHESIS  &mt RIGHT_BRACKET END  &kp BR_RIGHT_BRACKET  &kp BR_RIGHT_BRACE
+&kp LCTRL  &kp BR_APOS  &kp BR_EQUAL  &kp BR_DOUBLE_QUOTES  &kp BR_PIPE  &trans       &mt HOME BR_LEFT_BRACE &kp BR_LEFT_BRACKET  &kp BR_LEFT_PARENTHESIS  &mt END BR_RIGHT_BRACKET  &kp BR_RIGHT_BRACKET  &kp BR_RIGHT_BRACE
 &kp LSHFT  &trans    &trans     &trans             &trans    &trans       &kp BR_UNDER            &kp BR_PLUS          &kp BR_LESS_THAN         &kp BR_GREATER_THAN       &kp BR_BACKSLASH      &kp BR_TILDE
                                 &to 0              &trans    &trans       &trans               &trans            &to 3
             >;
