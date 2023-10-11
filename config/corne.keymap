@@ -8,79 +8,54 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/keys.h>
-#incluse "keys_br.h"
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
         default_colemak_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F  &kp P         &kp B                       &kp J        &kp L          &kp U      &kp Y         &mt SEMICOLON COLON  &kp BACKSPACE
-&kp LCTRL  &kp A  &kp R  &kp S  &kp T         &kp G                       &kp M        &kp N          &kp E      &kp I         &kp O                &kp ESC
-&kp LSHFT  &kp Z  &kp X  &kp C  &kp D         &kp V                       &kp K        &kp H          &kp COMMA  &mt EXCL DOT  &mt UNDER SLASH      &to 3
-                         &to 2  &kp LEFT_GUI  &mt SPACE LA(LC(LSHIFT))    &lt 4 ENTER  &kp RIGHT_ALT  &to 1
-            >;
+                &kp TAB    &kp Q  &kp W  &kp F  &kp P         &kp B                       &kp J        &kp L          &kp U      &kp Y         &mt SEMICOLON COLON  &kp BACKSPACE
+                &kp LCTRL  &kp A  &kp R  &kp S  &kp T         &kp G                       &kp M        &kp N          &kp E      &kp I         &kp O                &kp ESC
+                &kp LSHFT  &kp Z  &kp X  &kp C  &kp D         &kp V                       &kp K        &kp H          &kp COMMA  &mt EXCL DOT  &mt UNDER SLASH      &to 3
+                &to 2  &kp LEFT_GUI  &mt SPACE LA(LC(LSHIFT))    &lt 4 ENTER  &kp RIGHT_ALT  &to 1
+                >;
         };
 
         lower_colemak_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  -  |  +  |  *  |  /  |  =  |   |     |PLAY | LST | NXT |  0  | BKSP |
-            // | BTCLR|  5  |  6  |  7  |  8  |  9  |   | RWD |VOLUP|VOLDw| FWD |     |      |
-            // | SHFT |  0  |  1  |  2  |  3  |  4  |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
-&kp TAB     &kp KP_SUBTRACT     &kp KP_PLUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp KP_EQUAL    &none         &kp C_PLAY_PAUSE  &none         &none               &none   &kp BSPC
-&kp COMMA   &kp N5              &kp N6       &kp N7           &kp N8         &kp N9          &kp C_REWIND  &kp C_VOL_UP      &kp C_VOL_DN  &kp C_FAST_FORWARD  &trans  &trans
-&kp PERIOD  &mt F1 KP_NUMBER_0  &kp N1       &kp N2           &kp N3         &kp N4          &trans        &trans            &trans        &trans              &trans  &trans
-                                             &to 0            &trans         &trans          &trans        &trans            &to 2
-            >;
+                &kp TAB     &kp KP_SUBTRACT     &kp KP_PLUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp KP_EQUAL    &none         &kp C_PLAY_PAUSE  &none         &none               &none   &kp BSPC
+                &kp COMMA   &kp N5              &kp N6       &kp N7           &kp N8         &kp N9          &kp C_REWIND  &kp C_VOL_UP      &kp C_VOL_DN  &kp C_FAST_FORWARD  &trans  &trans
+                &kp PERIOD  &mt F1 KP_NUMBER_0  &kp N1       &kp N2           &kp N3         &kp N4          &trans        &trans            &trans        &trans              &trans  &trans
+                &to 1            &trans         &trans          &trans        &trans            &to 2
+                >;
         };
 
         raise_colemak_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
-&kp TAB    &kp EXCL  &kp AT     &kp HASH           &kp DLLR  &kp PRCNT    &kp CARET            &kp AMPS          &kp KP_MULTIPLY       &kp LPAR               &kp RPAR           &kp BSPC
-&kp LCTRL  &kp APOS  &kp EQUAL  &kp DOUBLE_QUOTES  &kp PIPE  &trans       &mt LEFT_BRACE HOME  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &mt RIGHT_BRACKET END  &kp RIGHT_BRACKET  &kp RIGHT_BRACE
-&kp LSHFT  &trans    &trans     &trans             &trans    &trans       &kp UNDER            &kp PLUS          &kp LESS_THAN         &kp GREATER_THAN       &kp BACKSLASH      &kp TILDE
-                                &to 0              &trans    &trans       &trans               &trans            &to 5
-            >;
+                &kp TAB    &kp EXCL  &kp AT     &kp HASH           &kp DLLR  &kp PRCNT    &kp CARET            &kp AMPS          &kp KP_MULTIPLY       &kp LPAR               &kp RPAR           &kp BSPC
+                &kp LCTRL  &kp APOS  &kp EQUAL  &kp DOUBLE_QUOTES  &kp PIPE  &trans       &mt LEFT_BRACE HOME  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &mt RIGHT_BRACKET END  &kp RIGHT_BRACKET  &kp RIGHT_BRACE
+                &kp LSHFT  &trans    &trans     &trans             &trans    &trans       &kp UNDER            &kp PLUS          &kp LESS_THAN         &kp GREATER_THAN       &kp BACKSLASH      &kp TILDE
+                &to 0              &trans    &trans       &trans               &trans            &to 5
+                >;
         };
 
         nav_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &none   &trans    &trans    &trans  &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans    &trans     &trans  &trans
-                        &trans  &trans  &trans    &trans    &trans  &trans
-            >;
+                &trans  &trans  &trans  &trans  &none   &trans    &trans    &trans  &trans    &trans     &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans    &trans     &trans  &trans
+                &trans  &trans  &trans    &trans    &trans  &trans
+                >;
         };
 
         bt_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &to 0   &trans    &trans  &trans  &trans
-            >;
+                &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &to 0   &trans    &trans  &trans  &trans
+                >;
         };
     };
 };
