@@ -1,0 +1,15 @@
+        accents_colemak_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |     |     |     |     |     |   |     |     |     |     |     |      |
+            // | CTLR |     |     |  ß  |     |     |   |GRAVE|ACUTE|CIRC | TIL | UML |      |
+            // | SHFT |     |     | ç Ç |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&trans  &none  &none  &none        &none   &none     &none       &none        &none        &none        &none        &none
+&trans  &none  &none  &kp DE_SS    &none   &none     &kt BR_GRV  &kp BR_ACUT  &kp BR_CIRC  &kp BR_TILD  &kp BR_DIAE  &none
+&trans  &none  &none  &kp BR_CCED  &none   &none     &none       &none        &none        &none        &none        &none
+                      &trans       &trans  &trans    &trans      &trans       &trans
+            >;
+        };
+

@@ -31,8 +31,8 @@
 
         lower_colemak_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  -  |  +  |  *  |  /  |  =  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR|  5  |  6  |  7  |  8  |  9  |   | LFT | DWN |  UP | RGT |     |      |
+            // |  TAB |  -  |  +  |  *  |  /  |  =  |   |     |PLAY | LST | NXT |  0  | BKSP |
+            // | BTCLR|  5  |  6  |  7  |  8  |  9  |   | RWD |VOLUP|VOLDw| FWD |     |      |
             // | SHFT |  0  |  1  |  2  |  3  |  4  |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
@@ -65,21 +65,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans    &trans     &trans  &trans
                         &trans  &trans  &trans    &trans    &trans  &trans
-            >;
-        };
-
-        accents_colemak_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |     |     |     |     |     |   |     |     |     |     |     |      |
-            // | CTLR |     |     |  ß  |     |     |   |GRAVE|ACUTE|CIRC | TIL | UML |      |
-            // | SHFT |     |     | ç Ç |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&trans  &none  &none  &none        &none   &none     &none       &none        &none        &none        &none        &none
-&trans  &none  &none  &kp DE_SS    &none   &none     &kt BR_GRV  &kp BR_ACUT  &kp BR_CIRC  &kp BR_TILD  &kp BR_DIAE  &none
-&trans  &none  &none  &kp BR_CCED  &none   &none     &none       &none        &none        &none        &none        &none
-                      &trans       &trans  &trans    &trans      &trans       &trans
             >;
         };
 
