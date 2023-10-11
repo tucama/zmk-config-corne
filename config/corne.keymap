@@ -22,25 +22,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F         &kp P  &kp B                       &kp J    &kp L  &kp U      &kp Y                   &kp SEMI              &kp CARET
-&kp LCTRL  &kp A  &kp R  &kp S         &kp T  &kp G                       &kp M    &kp N  &kp E      &kp I                   &kp O                 &kp TILDE
-&kp LSHFT  &kp Z  &kp X  &kp C         &kp D  &kp V                       &kp K    &kp H  &kp COMMA  &mt PERIOD EXCLAMATION  &mt SLASH UNDERSCORE  &kp ESC
-                         &kp LEFT_GUI  &to 2  &mt SPACE LA(LC(LSHIFT))    &kp RET  &to 1  &kp RALT
-            >;
-        };
-
-        raise_colemak_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET       &kp AMPS          &kp KP_MULTIPLY       &kp LPAR               &kp RPAR           &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER       &kp PLUS          &kp LBRC              &kp RBRC               &kp BACKSLASH      &kp TILDE
-                             &kp LGUI  &to 0     &kp SPACE    &kp RET         &to 2             &kp RALT
+&kp TAB    &kp Q  &kp W  &kp F  &kp P         &kp B                       &kp J        &kp L          &kp U      &kp Y         &mt SEMICOLON COLON  &kp BACKSPACE
+&kp LCTRL  &kp A  &kp R  &kp S  &kp T         &kp G                       &kp M        &kp N          &kp E      &kp I         &kp O                &kp ESC
+&kp LSHFT  &kp Z  &kp X  &kp C  &kp D         &kp V                       &kp K        &kp H          &kp COMMA  &mt EXCL DOT  &mt UNDER SLASH      &to 3
+                         &to 2  &kp LEFT_GUI  &mt SPACE LA(LC(LSHIFT))    &lt 4 ENTER  &kp RIGHT_ALT  &to 1
             >;
         };
 
@@ -52,10 +37,34 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp KP_SUBTRACT  &kp KP_PLUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp KP_EQUAL    &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &kp N5           &kp N6       &kp N7           &kp N8         &kp N9          &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &kp N0           &kp N1       &kp N2           &kp N3         &kp N4          &trans    &trans    &trans    &trans     &trans  &trans
-                                          &kp LGUI         &to 0          &kp SPACE       &kp RET   &to 4     &kp RALT
+&kp TAB     &kp KP_SUBTRACT     &kp KP_PLUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp KP_EQUAL    &none         &kp C_PLAY_PAUSE  &none         &none               &none   &kp BSPC
+&kp COMMA   &kp N5              &kp N6       &kp N7           &kp N8         &kp N9          &kp C_REWIND  &kp C_VOL_UP      &kp C_VOL_DN  &kp C_FAST_FORWARD  &trans  &trans
+&kp PERIOD  &mt F1 KP_NUMBER_0  &kp N1       &kp N2           &kp N3         &kp N4          &trans        &trans            &trans        &trans              &trans  &trans
+                                             &to 0            &trans         &trans          &trans        &trans            &to 2
+            >;
+        };
+
+        raise_colemak_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&kp TAB    &kp EXCL  &kp AT     &kp HASH           &kp DLLR  &kp PRCNT    &kp CARET            &kp AMPS          &kp KP_MULTIPLY       &kp LPAR               &kp RPAR           &kp BSPC
+&kp LCTRL  &kp APOS  &kp EQUAL  &kp DOUBLE_QUOTES  &kp PIPE  &trans       &mt LEFT_BRACE HOME  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &mt RIGHT_BRACKET END  &kp RIGHT_BRACKET  &kp RIGHT_BRACE
+&kp LSHFT  &trans    &trans     &trans             &trans    &trans       &kp UNDER            &kp PLUS          &kp LESS_THAN         &kp GREATER_THAN       &kp BACKSLASH      &kp TILDE
+                                &to 0              &trans    &trans       &trans               &trans            &to 5
+            >;
+        };
+
+        nav_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &none   &trans    &trans    &trans  &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans    &trans     &trans  &trans
+                        &trans  &trans  &trans    &trans    &trans  &trans
             >;
         };
 
@@ -65,11 +74,12 @@
             // | CTLR |     |     |  ß  |     |     |   |GRAVE|ACUTE|CIRC | TIL | UML |      |
             // | SHFT |     |     | ç Ç |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
+
             bindings = <
-&trans  &none  &none  &none  &none  &none    &none      &none      &none             &none      &none         &none
-&trans  &none  &none  &kp DE_SS  &none  &none    &kt BR_GRV  &kp BR_ACUT &kp BR_CIRC  &kp BR_TILD  &kp BR_DIAE  &none
-&trans  &none  &none  &kp BR_CCED  &none  &none    &none      &none      &none             &none      &none         &none
-                     &trans  &trans  &trans    &trans      &trans      &trans
+&trans  &none  &none  &none        &none   &none     &none       &none        &none        &none        &none        &none
+&trans  &none  &none  &kp DE_SS    &none   &none     &kt BR_GRV  &kp BR_ACUT  &kp BR_CIRC  &kp BR_TILD  &kp BR_DIAE  &none
+&trans  &none  &none  &kp BR_CCED  &none   &none     &none       &none        &none        &none        &none        &none
+                      &trans       &trans  &trans    &trans      &trans       &trans
             >;
         };
 
@@ -79,64 +89,12 @@
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
+
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &to 0   &trans    &trans  &trans  &trans
-            >;
-        };
-
-        default_qwerty_layer {
-            bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I          &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K          &kp L    &kp SEMI  &kp APOS
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &kp SPACE    &kp ENTER  &mo 3  &kp RIGHT_ALT
-            >;
-        };
-
-        raise_qwerty_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET       &kp AMPS          &kp KP_MULTIPLY       &kp LPAR               &kp RPAR           &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER       &kp PLUS          &kp LBRC              &kp RBRC               &kp BACKSLASH      &kp TILDE
-                             &kp LGUI  &to 0     &kp SPACE    &kp RET         &to 2             &kp RALT
-            >;
-        };
-
-        lower_qwerty_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp TAB     &kp KP_SUBTRACT  &kp KP_PLUS  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp KP_EQUAL    &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &kp N5           &kp N6       &kp N7           &kp N8         &kp N9          &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &kp N0           &kp N1       &kp N2           &kp N3         &kp N4          &trans    &trans    &trans    &trans     &trans  &trans
-                                          &kp LGUI         &to 0          &kp SPACE       &kp RET   &to 4     &kp RALT
-            >;
-        };
-
-        accents_qwerty_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |     |     |     |     |     |   |     |     |     |     |     |      |
-            // | CTLR |     |  ß  |     |     |     |   |GRAVE|ACUTE|CIRC | TIL | UML |      |
-            // | SHFT |     |     | ç Ç |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-            bindings = <
-&trans  &none  &none  &none  &none  &none    &none      &none      &none             &none      &none         &none
-&trans  &none  &kp DE_SS  &none  &none  &none    &kt BR_GRV  &kp BR_ACUT &kp BR_CIRC  &kp BR_TILD  &kp BR_DIAE  &none
-&trans  &none  &none  &kp BR_CCED  &none  &none    &none      &none      &none             &none      &none         &none
-                     &trans  &trans  &trans    &trans      &trans      &trans
             >;
         };
     };
