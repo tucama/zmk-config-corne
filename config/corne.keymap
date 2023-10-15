@@ -65,8 +65,8 @@
         raise_colemak_layer {
             bindings = <
 &kp TAB    &kp BR_EXCL  &kp BR_AT     &kp BR_HASH           &kp BR_DLLR  &kp BR_PRCNT    &kp BR_CARET            &kp BR_AMPS          &kp BR_STAR              &kp BR_LPAR               &kp BR_RPAR           &trans
-&kp LCTRL  &kp BR_APOS  &kp BR_EQUAL  &kp BR_DOUBLE_QUOTES  &kp BR_PIPE  &trans          &mt HOME BR_LEFT_BRACE  &kp BR_LEFT_BRACKET  &kp BR_LEFT_PARENTHESIS  &mt END BR_RIGHT_BRACKET  &kp BR_RIGHT_BRACKET  &kp BR_RIGHT_BRACE
-&kp LSHFT  &trans       &trans        &trans                &trans       &trans          &kp BR_UNDER            &kp BR_PLUS          &kp BR_LESS_THAN         &kp BR_GREATER_THAN       &kp BR_BACKSLASH      &kp BR_TILDE
+&kp LCTRL  &kp BR_APOS  &kp BR_EQUAL  &kp BR_DOUBLE_QUOTES  &kp BR_PIPE  &trans          &mt HOME BR_LEFT_BRACE  &kp BR_LEFT_BRACKET  &kp BR_LEFT_PARENTHESIS  &mt END BR_RIGHT_PARENTHESIS  &kp BR_RIGHT_BRACKET  &kp BR_RIGHT_BRACE
+&kp LSHFT  &trans       &trans        &trans                &kp BR_MINUS &trans          &kp BR_UNDER            &kp BR_PLUS          &kp BR_LESS_THAN         &kp BR_GREATER_THAN       &kp BR_BACKSLASH      &kp BR_TILDE
                                       &to 0                 &trans       &trans          &trans                  &trans               &to 3
             >;
         };
