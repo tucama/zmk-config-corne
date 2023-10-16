@@ -27,6 +27,7 @@
             label = "SHIFT_CAPS";
             #binding-cells = <0>;
             bindings = <&caps_word>, <&kt CAPSLOCK>;
+            tapping-term-ms = <250>;
         };
         hmr: homewrow_mods_right {
             compatible = "zmk,behavior-hold-tap";
@@ -47,57 +48,6 @@
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
             hold-trigger-key-positions = <6 7 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 8>;
-        };
-        ttl1: ttl1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TTL1";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&to 1>;
-
-            tapping-term-ms = <150>;
-        };
-        ttl2: ttl2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TTL2";
-            #binding-cells = <0>;
-            bindings = <&kp ESC>, <&to 2>;
-
-            tapping-term-ms = <150>;
-        };
-        ttl3: ttl3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TTL3";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&to 3>;
-
-            tapping-term-ms = <150>;
-        };
-        dth1: dth1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DTH1";
-            bindings = <&mo>, <&ttl1>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-        };
-        dth2: dth2 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DTH2";
-            bindings = <&mo>, <&ttl2>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-        };
-        dth3: dth3 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DTH3";
-            bindings = <&mo>, <&ttl3>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
         };
     };
 
@@ -146,8 +96,8 @@
             bindings = <
 &shift_caps  &kp Q            &kp W            &kp F         &kp P              &kp B        &kp J        &kp L               &kp U         &kp Y             &mt BR_SEMI BR_COLON       &mt BR_APOS BR_DOUBLE_QUOTES
 &kp BR_PIPE     &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G        &kp M        &hml RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O     &mt BR_UNDER BR_MINUS
-&none        &kp Z            &kp X            &kp C         &kp D              &kp V        &kp K        &kp H               &kp BR_COMMA     &kp BR_DOT           &mt BR_BACKSLASH BR_SLASH  &none
-                                               &kt TAB       &dth2 2 0          &dth3 3 0    &lt 5 ENTER  &dth1 1 0           &kp DELETE
+&to 2        &kp Z            &kp X            &kp C         &kp D              &kp V        &kp K        &kp H               &kp BR_COMMA     &kp BR_DOT           &mt BR_BACKSLASH BR_SLASH  &to 1
+                                               &kt TAB       &lt 2 ESC         &lt 3 SPACE    &lt 5 ENTER  &lt 1 BACKSPACE           &kp DELETE
             >;
         };
 
@@ -155,7 +105,7 @@
             bindings = <
 &kp BR_PERCENT    &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp KP_PLUS  &kp KP_MINUS  &kp KP_EQUAL    &trans  &trans  &trans  &trans  &none   &trans
 &kp BR_COMMA   &kp N0           &kp N1         &kp N2       &kp N3        &kp N4    &trans  &trans  &trans  &trans  &trans  &trans
-&kp BR_PERIOD  &kp N5           &kp N6         &kp N7       &kp N8        &kp N9          &trans  &trans  &trans  &trans  &trans  &trans
+&kp BR_PERIOD  &kp N5           &kp N6         &kp N7       &kp N8        &kp N9          &trans  &trans  &trans  &trans  &trans  &to 4
                                                &to 0        &kp ESC       &kp SPACE       &trans  &trans  &trans
             >;
         };
@@ -203,15 +153,6 @@
 &kp LSHFT  &kp Z  &kp X  &kp C     &kp V           &kp B          &kp N        &kp M     &kp BR_COMMA  &kp BR_DOT  &kp BR_FSLH  &kp RSHFT
                          &kp LALT  &kp LEFT_SHIFT  &lt 1 SPACE    &lt 2 ENTER  &kp RALT  &kp RCTRL
             >;
-        };
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <4>;
         };
     };
 };
