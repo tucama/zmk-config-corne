@@ -59,34 +59,42 @@
             bindings = <&kp BR_LEFT_PARENTHESIS>;
             key-positions = <19 20>;
             layers = <0>;
-            timeout-ms = <200>;
+            timeout-ms = <100>;
             require-prior-idle-ms = <100>;
-            slow-release;
         };
 
         lbkt {
             bindings = <&kp BR_LEFT_BRACKET>;
             key-positions = <7 8>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
         };
 
         lbrc {
             bindings = <&kp BR_LEFT_BRACE>;
             key-positions = <31 32>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
         };
 
         rbrc {
             bindings = <&kp BR_RIGHT_BRACE>;
             key-positions = <32 33>;
+            timeout-ms = <100>;
         };
 
         rbkt {
             bindings = <&kp BR_RIGHT_BRACKET>;
             key-positions = <8 9>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
         };
 
         rpar {
             bindings = <&kp BR_RIGHT_PARENTHESIS>;
             key-positions = <21 20>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
         };
     };
 
@@ -107,32 +115,32 @@
 &kp BR_PERCENT  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp KP_PLUS  &kp KP_MINUS  &kp KP_EQUAL    &trans  &trans  &trans  &trans  &none   &trans
 &kp BR_COMMA    &kp N0           &kp N1         &kp N2       &kp N3        &kp N4          &trans  &trans  &trans  &trans  &trans  &trans
 &kp BR_PERIOD   &kp N5           &kp N6         &kp N7       &kp N8        &kp N9          &trans  &trans  &trans  &trans  &trans  &to 4
-                                                &to 0        &kp ESC       &kp SPACE       &trans  &trans  &trans
+                                                &to 0        &trans        &trans          &trans  &trans  &trans
             >;
         };
 
         raise_layer {
             bindings = <
-&none  &none   &none   &none   &none    &none        &trans       &trans     &trans       &trans         &trans        &trans
-&none  &none   &none   &none   &none    &trans       &kp BR_EXCL  &kp BR_AT  &kp BR_HASH  &kp BR_DOLLAR  &kp BR_PRCNT  &kp BR_AMPS
-&none  &trans  &trans  &trans  &none    &trans       &none        &none      &none        &none          &none         &none
-                       &to 0   &kp ESC  &kp SPACE    &none        &none      &none
+&trans      &kp C_REWIND      &kp C_FF      &kp K_REDO           &kp K_UNDO    &trans             &trans       &trans     &trans       &trans         &trans        &trans
+&trans      &kp C_BRI_DN      &kp C_BRI_UP  &mt C_MUTE C_VOL_DN  &kp C_VOL_UP  &kp PRINTSCREEN    &kp BR_EXCL  &kp BR_AT  &kp BR_HASH  &kp BR_DOLLAR  &kp BR_PRCNT  &kp BR_AMPS
+&kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &kp K_PASTE          &kp K_COPY    &kp K_CUT          &trans       &trans     &trans       &trans         &trans        &trans
+                                            &trans               &trans        &trans             &trans       &trans     &trans
             >;
         };
 
         nav_layer {
             bindings = <
-&trans      &kp C_REWIND      &kp C_FAST_FORWARD  &kp K_REDO           &kp K_UNDO       &kp PRINTSCREEN    &kp LA(LEFT)  &kp LS(LC(TAB))  &kp LC(TAB)  &kp LA(RIGHT)  &trans      &trans
-&trans      &kp C_BRI_DN      &kp C_BRI_UP        &mt C_MUTE C_VOL_DN  &kp C_VOLUME_UP  &kp K_CUT          &kp LEFT      &kp DOWN         &kp UP       &kp RIGHT      &trans      &trans
-&kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT          &kp K_PASTE          &kp K_COPY       &kp K_CUT          &kp HOME      &kp PAGE_DOWN    &kp PAGE_UP  &kp END        &kp INSERT  &trans
-                                                  &to 0                &trans           &trans             &trans        &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &none     &kp LA(LEFT)  &kp LS(LC(TAB))  &kp LC(TAB)  &kp LA(RIGHT)  &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT      &kp DOWN         &kp UP       &kp RIGHT      &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME      &kp PAGE_DOWN    &kp PAGE_UP  &kp END        &kp INSERT  &trans
+                        &to 0   &trans  &trans    &trans        &trans           &trans
             >;
         };
 
         bt_layer {
             bindings = <
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans          &trans  &to 6   &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans          &trans  &to 6   &to 0   &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &bt BT_CLR    &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                     &to 0         &trans        &trans          &trans  &trans  &trans
             >;
@@ -149,10 +157,10 @@
 
         gaming_layer {
             bindings = <
-&kp ESC  &kp TAB    &kp Q  &kp W     &kp E           &kp R        &kp N1     &kp N2     &kp N3   &kp N4    &kp N5    &kp PAGE_UP
-&kp J    &kp LSHFT  &kp A  &kp S     &kp D           &kp F        &kp N6     &kp N7     &kp N8   &kp N9    &kp N0    &kp PAGE_DOWN
+&kp ESC  &kp TAB    &kp Q  &kp W     &kp E           &kp R        &kp N1        &kp N2        &kp N3      &kp N4       &kp N5       &kp PAGE_UP
+&kp J    &kp LSHFT  &kp A  &kp S     &kp D           &kp F        &kp N6        &kp N7        &kp N8      &kp N9       &kp N0       &kp PAGE_DOWN
 &kp M    &kp LCTRL  &kp Z  &kp X     &kp C           &kp V        &kp BR_MINUS  &kp BR_COMMA  &kp BR_DOT  &kp BR_SEMI  &kp BR_FSLH  &to 4
-                           &kp LALT  &kp LEFT_SHIFT  &kp SPACE    &kp ENTER  &kp RALT   &kp ESC
+                           &kp LALT  &kp LEFT_SHIFT  &kp SPACE    &kp ENTER     &kp RALT      &kp ESC
             >;
         };
     };
