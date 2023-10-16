@@ -37,7 +37,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 3>;
         };
         hml: homewrow_mods_left {
@@ -47,7 +47,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <6 7 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 8>;
         };
     };
@@ -114,7 +114,7 @@
         raise_layer {
             bindings = <
 &none  &none   &none   &none   &none    &none        &trans       &trans     &trans       &trans         &trans        &trans
-&none  &none   &none   &none   &none    &trans       &kt BR_EXCL  &kp BR_AT  &kp BR_HASH  &kp BR_DOLLAR  &kp BR_PRCNT  &kp BR_AMPS
+&none  &none   &none   &none   &none    &trans       &kp BR_EXCL  &kp BR_AT  &kp BR_HASH  &kp BR_DOLLAR  &kp BR_PRCNT  &kp BR_AMPS
 &none  &trans  &trans  &trans  &none    &trans       &none        &none      &none        &none          &none         &none
                        &to 0   &kp ESC  &kp SPACE    &none        &none      &none
             >;
@@ -151,7 +151,7 @@
             bindings = <
 &kp ESC  &kp TAB    &kp Q  &kp W     &kp E           &kp R        &kp N1     &kp N2     &kp N3   &kp N4    &kp N5    &kp PAGE_UP
 &kp J    &kp LSHFT  &kp A  &kp S     &kp D           &kp F        &kp N6     &kp N7     &kp N8   &kp N9    &kp N0    &kp PAGE_DOWN
-&kp M    &kp LCTRL  &kp Z  &kp X     &kp C           &kp V        &kp MINUS  &kp COMMA  &kp DOT  &kp SEMI  &kp FSLH  &to 4
+&kp M    &kp LCTRL  &kp Z  &kp X     &kp C           &kp V        &kp BR_MINUS  &kp BR_COMMA  &kp BR_DOT  &kp BR_SEMI  &kp BR_FSLH  &to 4
                            &kp LALT  &kp LEFT_SHIFT  &kp SPACE    &kp ENTER  &kp RALT   &kp ESC
             >;
         };
