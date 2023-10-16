@@ -54,7 +54,7 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&to 1>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <150>;
         };
         ttl2: ttl2 {
             compatible = "zmk,behavior-tap-dance";
@@ -62,7 +62,7 @@
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&to 2>;
 
-            tapping-term-ms = <400>;
+            tapping-term-ms = <150>;
         };
         ttl3: ttl3 {
             compatible = "zmk,behavior-tap-dance";
@@ -70,7 +70,7 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&to 3>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <150>;
         };
         dth1: dth1 {
             compatible = "zmk,behavior-hold-tap";
@@ -105,7 +105,7 @@
         compatible = "zmk,combos";
 
         lpar {
-            bindings = <&kp LEFT_PARENTHESIS>;
+            bindings = <&kp BR_LEFT_PARENTHESIS>;
             key-positions = <19 20>;
             layers = <0>;
             timeout-ms = <200>;
@@ -114,27 +114,27 @@
         };
 
         lbkt {
-            bindings = <&kp LEFT_BRACKET>;
+            bindings = <&kp BR_LEFT_BRACKET>;
             key-positions = <7 8>;
         };
 
         lbrc {
-            bindings = <&kp LEFT_BRACE>;
+            bindings = <&kp BR_LEFT_BRACE>;
             key-positions = <31 32>;
         };
 
         rbrc {
-            bindings = <&kp RIGHT_BRACE>;
+            bindings = <&kp BR_RIGHT_BRACE>;
             key-positions = <32 33>;
         };
 
         rbkt {
-            bindings = <&kp RIGHT_BRACKET>;
+            bindings = <&kp BR_RIGHT_BRACKET>;
             key-positions = <8 9>;
         };
 
         rpar {
-            bindings = <&kp RIGHT_PARENTHESIS>;
+            bindings = <&kp BR_RIGHT_PARENTHESIS>;
             key-positions = <21 20>;
         };
     };
