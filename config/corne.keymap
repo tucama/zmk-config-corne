@@ -190,7 +190,7 @@
         accents_layer {
             bindings = <
 &trans  &none  &none  &none             &none   &none     &none         &none         &none         &none         &none          &none
-&trans  &none  &none  &none             &none   &none     &kt BR_GRAVE  &kp BR_ACUTE  &kp BR_CARET  &kp BR_TILDE  &kp BR_UMLAUT  &none
+&trans  &none  &none  &none             &none   &none     &kp BR_GRAVE  &kp BR_ACUTE  &kp BR_CARET  &kp BR_TILDE  &kp BR_UMLAUT  &none
 &trans  &none  &none  &kp BR_C_CEDILLA  &none   &none     &none         &none         &none         &none         &none          &none
                       &trans            &trans  &trans    &trans        &trans        &trans
             >;
