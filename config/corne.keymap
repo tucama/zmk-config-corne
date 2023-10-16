@@ -149,10 +149,10 @@
 
         gaming_layer {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R           &kp T          &kp Y        &kp U     &kp I         &kp O       &kp P        &kp BR_LBKT
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F           &kp G          &kp H        &kp J     &kp K         &kp L       &kp BR_SEMI  &kp BR_APOS
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V           &kp B          &kp N        &kp M     &kp BR_COMMA  &kp BR_DOT  &kp BR_FSLH  &kp RSHFT
-                         &kp LALT  &kp LEFT_SHIFT  &lt 1 SPACE    &lt 2 ENTER  &kp RALT  &kp RCTRL
+&kp TAB    &kp Q  &kp W  &kp E     &kp R           &kp T        &kp Y      &kp U     &kp I         &kp O       &kp P        &kp BACKSPACE
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F           &kp G        &kp H      &kp J     &kp K         &kp L       &kp BR_SEMI  &kp BR_APOS
+&mo 1      &kp Z  &kp X  &kp C     &kp V           &kp B        &kp N      &kp M     &kp BR_COMMA  &kp BR_DOT  &kp BR_FSLH  &to 4
+                         &kp LALT  &kp LEFT_SHIFT  &kp SPACE    &kp ENTER  &kp RALT  &kp ESC
             >;
         };
     };
