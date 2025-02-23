@@ -140,10 +140,10 @@
 
         gaming_layer {
             bindings = <
-&kp ESC  &kp TAB    &kp Q  &kp W     &kp E           &kp R        &kp N1        &kp N2        &kp N3      &kp N4       &kp N5       &kp PAGE_UP
-&kp J    &kp LSHFT  &kp A  &kp S     &kp D           &kp F        &kp N6        &kp N7        &kp N8      &kp N9       &kp N0       &kp PAGE_DOWN
-&kp M    &kp LCTRL  &kp Z  &kp X     &kp C           &kp V        &kp BR_MINUS  &kp BR_COMMA  &kp BR_DOT  &kp BR_SEMI  &kp BR_FSLH  &to 0
-                           &kp LALT  &kp LEFT_SHIFT  &kp SPACE    &kp ENTER     &kp RALT      &kp ESC
+&kp ESC  &kp TAB    &kp Q  &kp W     &kp E  &kp R        &kp N1        &kp N2        &kp N3      &kp N4       &kp N5       &kp PAGE_UP
+&kp J    &kp LSHFT  &kp A  &kp S     &kp D  &kp F        &kp N6        &kp N7        &kp N8      &kp N9       &kp N0       &kp PAGE_DOWN
+&kp M    &kp LCTRL  &kp Z  &kp X     &kp C  &kp V        &kp BR_MINUS  &kp BR_COMMA  &kp BR_DOT  &kp BR_SEMI  &kp BR_FSLH  &to 0
+                           &kp LALT  &mo 7  &kp SPACE    &kp ENTER     &kp RALT      &kp ESC
             >;
         };
 
@@ -153,6 +153,15 @@
 &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11    &trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI  &trans
 &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12    &trans  &trans          &trans     &trans    &trans        &to 0
                         &trans  &trans  &trans     &trans  &trans          &trans
+            >;
+        };
+
+        gaming_numbers {
+            bindings = <
+&kp ESC  &kp TAB    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp R        &kp N1        &kp N2        &kp N3      &kp N4       &kp N5       &kp PAGE_UP
+&kp J    &kp LSHFT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp F        &kp N6        &kp N7        &kp N8      &kp N9       &kp N0       &kp PAGE_DOWN
+&kp M    &kp LCTRL  &kp N7        &kp N8        &kp N9        &kp N0       &kp BR_MINUS  &kp BR_COMMA  &kp BR_DOT  &kp BR_SEMI  &kp BR_FSLH  &to 0
+                                  &kp LALT      &none         &kp SPACE    &kp ENTER     &kp RALT      &kp ESC
             >;
         };
     };
