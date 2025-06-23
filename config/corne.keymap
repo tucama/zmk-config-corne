@@ -22,7 +22,6 @@
     behaviors {
         shift_caps: shift_caps {
             compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_CAPS";
             #binding-cells = <0>;
             bindings = <&caps_word>, <&kt CAPSLOCK>;
 
@@ -31,7 +30,6 @@
 
         hmr: homewrow_mods_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_RIGHT_HAND";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -45,7 +43,6 @@
 
         hml: homewrow_mods_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_LEFT_HAND";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -65,10 +62,17 @@
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_RCTL|MOD_RSFT|MOD_LGUI|MOD_RALT|MOD_RGUI)>;
             ignore-numbers;
         };
+        nsl: nav_smart_layers {
+            compatible = "zmk,behavior-caps-word";
+            #binding-cells = <0>;
+            layers = <3>;
+            ignore-numbers;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_RCTL|MOD_RSFT|MOD_LGUI|MOD_RALT|MOD_RGUI)>;
+            continue-list = <UP DOWN RIGHT LEFT TAB PAGE_UP PAGE_DOWN HOME END>;
+        };
 
         smart_func: smart_func {
             compatible = "zmk,behavior-caps-word";
-            label = "SMART_FUNC";
             #binding-cells = <0>;
             layers = <6>;
             ignore-numbers;
@@ -86,7 +90,7 @@
             bindings = <
 &shift_caps               &kp Q            &kp W            &kp F         &kp P              &kp B          &kp J        &kp L               &kp U         &kp Y             &kp BR_SEMI       &kp BR_SQT
 &mt BR_EXCL BR_BACKSLASH  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G          &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &mt BR_EQUAL BR_MINUS
-&trans                    &kp Z            &kp X            &kp C         &kp D              &kp V          &kp K        &kp H               &kp BR_COMMA  &kp BR_PERIOD     &kp BR_SLASH      &num_word
+&nsl                      &kp Z            &kp X            &kp C         &kp D              &kp V          &kp K        &kp H               &kp BR_COMMA  &kp BR_PERIOD     &kp BR_SLASH      &num_word
                                                             &kp ESC       &lt 2 DELETE       &lt 3 ENTER    &lt 4 SPACE  &kp BACKSPACE       &lt 1 TAB
             >;
         };
