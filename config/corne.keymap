@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <behaviors/num_word.dtsi>
 
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
 
@@ -55,25 +56,13 @@
             require-prior-idle-ms = <175>;
             hold-trigger-on-release;
         };
-
-        num_word: behavior_num_word {
-            compatible = "zmk,behavior-caps-word";
-            label = "NUM_WORD";
+        num_word: num_word {
             #binding-cells = <0>;
-            layers = <1>;
-            continue-list = <BACKSPACE DELETE DOT COMMA KP_EQUAL KP_MULTIPLY KP_PLUS KP_MINUS KP_DIVIDE PERCENT F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12 EQUAL PLUS STAR MINUS>;
-            ignore-numbers;
+            compatible = "zmk,behavior-num-word";
+            layers = <1>;    
+            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_RCTL|MOD_RSFT|MOD_LGUI|MOD_RALT|MOD_RGUI)>;
-        };
-
-        nav_smart_layers: nav_smart_layers {
-            compatible = "zmk,behavior-caps-word";
-            label = "NAV_SMART_LAYERS";
-            #binding-cells = <0>;
-            layers = <3>;
             ignore-numbers;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_RCTL|MOD_RSFT|MOD_LGUI|MOD_RALT|MOD_RGUI)>;
-            continue-list = <UP DOWN RIGHT LEFT TAB PAGE_UP PAGE_DOWN HOME END>;
         };
 
         smart_func: smart_func {
