@@ -5,10 +5,10 @@
  */
 
 #include "keys_br.h"
+#include <behaviors/num_word.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <behaviors/num_word.dtsi>
 
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
 
@@ -56,10 +56,11 @@
             require-prior-idle-ms = <175>;
             hold-trigger-on-release;
         };
+
         num_word: num_word {
             #binding-cells = <0>;
             compatible = "zmk,behavior-num-word";
-            layers = <1>;    
+            layers = <1>;
             continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_RCTL|MOD_RSFT|MOD_LGUI|MOD_RALT|MOD_RGUI)>;
             ignore-numbers;
@@ -85,7 +86,7 @@
             bindings = <
 &shift_caps               &kp Q            &kp W            &kp F         &kp P              &kp B          &kp J        &kp L               &kp U         &kp Y             &kp BR_SEMI       &kp BR_SQT
 &mt BR_EXCL BR_BACKSLASH  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G          &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &mt BR_EQUAL BR_MINUS
-&nav_smart_layers         &kp Z            &kp X            &kp C         &kp D              &kp V          &kp K        &kp H               &kp BR_COMMA  &kp BR_PERIOD     &kp BR_SLASH      &num_word
+&trans                    &kp Z            &kp X            &kp C         &kp D              &kp V          &kp K        &kp H               &kp BR_COMMA  &kp BR_PERIOD     &kp BR_SLASH      &num_word
                                                             &kp ESC       &lt 2 DELETE       &lt 3 ENTER    &lt 4 SPACE  &kp BACKSPACE       &lt 1 TAB
             >;
         };
