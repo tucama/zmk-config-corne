@@ -62,7 +62,7 @@
 
         default_colemak_layer {
             bindings = <
-&shift_caps                       &kp Q            &kp W            &kp F         &kp P              &kp B          &kp J        &kp L               &kp U         &kp Y             &kp SEMICOLON     &kp SQT
+&shift_caps                       &kp Q            &kp W            &kp F         &kp P              &kp B          &kp J        &kp L               &kp U         &kp Y             &kp SEMICOLON     &kp RA(SQT)
 &mt EXCLAMATION NON_US_BACKSLASH  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G          &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &mt EQUAL MINUS
 &trans                            &kp Z            &kp X            &kp C         &kp D              &kp V          &kp K        &kp H               &kp COMMA     &kp PERIOD        &kp SLASH         &trans
                                                                     &kp ESC       &lt 2 DELETE       &lt 3 ENTER    &lt 4 SPACE  &kp BACKSPACE       &lt 1 TAB
@@ -98,10 +98,10 @@
 
         accent_layer {
             bindings = <
-&trans  &none  &none  &none   &none   &none     &none          &none        &none          &none          &none            &none
-&trans  &none  &none  &none   &none   &none     &kp RA(GRAVE)  &kp RA(SQT)  &kp RA(CARET)  &kp RA(TILDE)  &kp LS(RA(SQT))  &none
-&trans  &none  &none  &none   &none   &none     &none          &none        &none          &none          &none            &none
-                      &trans  &trans  &trans    &trans         &trans       &trans
+&trans  &none  &none  &none   &none   &none     &none      &none    &none      &none      &none        &none
+&trans  &none  &none  &none   &none   &none     &kp GRAVE  &kp SQT  &kp CARET  &kp TILDE  &kp LS(SQT)  &none
+&trans  &none  &none  &none   &none   &none     &none      &none    &none      &none      &none        &none
+                      &trans  &trans  &trans    &trans     &trans   &trans
             >;
         };
 
