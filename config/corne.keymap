@@ -62,7 +62,6 @@
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_RCTL|MOD_RSFT|MOD_LGUI|MOD_RALT|MOD_RGUI)>;
             ignore-numbers;
         };
-
     };
 
     combos { compatible = "zmk,combos"; };
@@ -74,17 +73,17 @@
             bindings = <
 &shift_caps               &kp Q            &kp W            &kp F         &kp P              &kp B          &kp J        &kp L               &kp U         &kp Y             &kp BR_SEMI       &kp BR_SQT
 &mt BR_EXCL BR_BACKSLASH  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G          &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &mt BR_EQUAL BR_MINUS
-&trans                     &kp Z            &kp X            &kp C         &kp D              &kp V          &kp K        &kp H               &kp BR_COMMA  &kp BR_PERIOD     &kp BR_SLASH      &num_word
+&trans                    &kp Z            &kp X            &kp C         &kp D              &kp V          &kp K        &kp H               &kp BR_COMMA  &kp BR_PERIOD     &kp BR_SLASH      &num_word
                                                             &kp ESC       &lt 2 DELETE       &lt 3 ENTER    &lt 4 SPACE  &kp BACKSPACE       &lt 1 TAB
             >;
         };
 
         num_layer {
             bindings = <
-&none  &kp BR_ASTERISK  &kp N7  &kp N8               &kp N9  &kp BR_MINUS    &trans       &trans           &trans     &trans    &trans        &trans
-&none  &kp BR_SLASH     &kp N4  &kp N5               &kp N6  &kp BR_PLUS     &to 6  &kp RIGHT_SHIFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI  &trans
-&none  &kp BR_PERCENT   &kp N1  &kp N2               &kp N3  &kp BR_EQUAL    &trans       &trans           &trans     &trans    &trans        &to 0
-                                &mt BR_COMMA BR_DOT  &kp N0  &trans          &trans       &trans           &trans
+&none  &kp BR_ASTERISK  &kp N7  &kp N8               &kp N9  &kp BR_MINUS    &to 8   &trans           &trans     &trans    &trans        &trans
+&none  &kp BR_SLASH     &kp N4  &kp N5               &kp N6  &kp BR_PLUS     &to 6   &kp RIGHT_SHIFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI  &trans
+&none  &kp BR_PERCENT   &kp N1  &kp N2               &kp N3  &kp BR_EQUAL    &trans  &trans           &trans     &trans    &trans        &to 0
+                                &mt BR_COMMA BR_DOT  &kp N0  &trans          &trans  &trans           &trans
             >;
         };
 
@@ -139,6 +138,15 @@
 &kp J    &kp LSHFT  &kp NUMBER_5  &kp NUMBER_6  &kp N7        &kp NUMBER_8    &kp N6        &kp N7        &kp N8      &kp N9       &kp N0       &kp PAGE_DOWN
 &kp M    &kp LCTRL  &kp Z         &kp X         &kp N9        &kp N0          &kp BR_MINUS  &kp BR_COMMA  &kp BR_DOT  &kp BR_SEMI  &kp BR_FSLH  &to 0
                                   &kp LALT      &none         &kp SPACE       &kp ENTER     &kp RALT      &kp ESC
+            >;
+        };
+
+        qwerty {
+            bindings = <
+&kp ESC    &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y      &kp U     &kp I      &kp O    &kp P     &kp LBKT
+&kp TAB    &kp A  &kp S  &kp D     &kp F      &kp G        &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI
+                         &kp LALT  &kp LCTRL  &kp ENTER    &kp SPACE  &kp BSPC  &mo 1
             >;
         };
     };
