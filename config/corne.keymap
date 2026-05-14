@@ -57,6 +57,15 @@
 
     combos { compatible = "zmk,combos"; };
 
+    macros {
+        cedilha: cedilha {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(COMMA) &kp C>;
+            label = "CEDILHA";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -98,10 +107,10 @@
 
         accent_layer {
             bindings = <
-&trans  &none  &none  &none   &none   &none     &none      &none    &none      &none      &none        &none
-&trans  &none  &none  &none   &none   &none     &kp GRAVE  &kp SQT  &kp CARET  &kp TILDE  &kp LS(SQT)  &none
-&trans  &none  &none  &none   &none   &none     &none      &none    &none      &none      &none        &none
-                      &trans  &trans  &trans    &trans     &trans   &trans
+&trans  &none  &none  &none     &none   &none     &none      &none    &none      &none      &none        &none
+&trans  &none  &none  &none     &none   &none     &kp GRAVE  &kp SQT  &kp CARET  &kp TILDE  &kp LS(SQT)  &none
+&trans  &none  &none  &cedilha  &none   &none     &none      &none    &none      &none      &none        &none
+                      &trans    &trans  &trans    &trans     &trans   &trans
             >;
         };
 
