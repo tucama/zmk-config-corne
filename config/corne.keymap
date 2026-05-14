@@ -74,43 +74,16 @@
 &shift_caps                       &kp Q            &kp W            &kp F         &kp P              &kp B          &kp J        &kp L               &kp U         &kp Y             &kp SEMICOLON     &kp RA(SQT)
 &mt EXCLAMATION NON_US_BACKSLASH  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G          &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &mt EQUAL MINUS
 &trans                            &kp Z            &kp X            &kp C         &kp D              &kp V          &kp K        &kp H               &kp COMMA     &kp PERIOD        &kp SLASH         &trans
-                                                                    &kp ESC       &lt 2 DELETE       &lt 3 ENTER    &lt 4 SPACE  &kp BACKSPACE       &lt 1 TAB
+                                                                    &kp ESC       &lt 7 DELETE       &lt 5 ENTER    &lt 4 SPACE  &kp BACKSPACE       &lt 8 TAB
             >;
         };
 
-        num_layer {
+        qwerty {
             bindings = <
-&none  &kp ASTERISK  &kp N7  &kp N8            &kp N9  &kp MINUS    &to 8   &trans           &trans     &trans    &trans        &trans
-&none  &kp SLASH     &kp N4  &kp N5            &kp N6  &kp PLUS     &to 6   &kp RIGHT_SHIFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI  &trans
-&none  &kp PERCENT   &kp N1  &kp N2            &kp N3  &kp EQUAL    &trans  &trans           &trans     &trans    &trans        &to 0
-                             &mt COMMA PERIOD  &kp N0  &trans       &trans  &trans           &trans
-            >;
-        };
-
-        media_layer {
-            bindings = <
-&to 5       &kp C_REWIND      &kp C_FF      &kp K_REDO           &kp K_UNDO    &trans             &kp AT_SIGN     &kp HASH          &kp ASTERISK          &kp DOLLAR             &kp AMPERSAND      &trans
-&trans      &kp C_BRI_DN      &kp C_BRI_UP  &mt C_MUTE C_VOL_DN  &kp C_VOL_UP  &kp PRINTSCREEN    &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE
-&kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &kp K_PASTE          &kp K_COPY    &kp K_CUT          &trans          &trans            &trans                &trans                 &trans             &trans
-                                            &trans               &trans        &trans             &trans          &trans            &trans
-            >;
-        };
-
-        nav_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &bt BT_PRV  &bt BT_NXT    &kp LA(LEFT)  &kp LS(LC(TAB))  &kp LC(TAB)  &kp LA(RIGHT)  &trans      &trans
-&trans  &trans  &trans  &trans  &trans      &bt BT_CLR    &kp LEFT      &kp DOWN         &kp UP       &kp RIGHT      &trans      &trans
-&trans  &trans  &trans  &trans  &trans      &trans        &kp HOME      &kp PAGE_DOWN    &kp PAGE_UP  &kp END        &kp INSERT  &to 0
-                        &trans  &trans      &trans        &trans        &trans           &trans
-            >;
-        };
-
-        accent_layer {
-            bindings = <
-&trans  &none  &none  &none     &none   &none     &none      &none    &none      &none      &none        &none
-&trans  &none  &none  &none     &none   &none     &kp GRAVE  &kp SQT  &kp CARET  &kp TILDE  &kp LS(SQT)  &none
-&trans  &none  &none  &cedilha  &none   &none     &none      &none    &none      &none      &none        &none
-                      &trans    &trans  &trans    &trans     &trans   &trans
+&kp ESC    &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y      &kp U     &kp I      &kp O    &kp P     &kp LBKT
+&kp TAB    &kp A  &kp S  &kp D     &kp F      &kp G        &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &to 0
+                         &kp LALT  &kp LCTRL  &kp ENTER    &kp SPACE  &kp BSPC  &mo 8
             >;
         };
 
@@ -119,16 +92,7 @@
 &kp ESC       &kp TAB    &kp Q  &kp W  &kp E           &kp R        &kp T      &kp Y     &kp U    &kp I      &kp O    &kp P
 &kp LEFT_ALT  &kp LSHFT  &kp A  &kp S  &kp D           &kp F        &kp G      &kp H     &kp J    &kp K      &kp L    &kp SEMI
 &kp M         &kp LCTRL  &kp Z  &kp X  &kp C           &kp V        &kp B      &kp N     &kp M    &kp COMMA  &kp DOT  &to 0
-                                &mo 7  &kp LEFT_SHIFT  &kp SPACE    &kp ENTER  &kp RALT  &kp ESC
-            >;
-        };
-
-        function_layer {
-            bindings = <
-&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10    &trans  &trans          &trans     &trans    &trans        &trans
-&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11    &trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI  &trans
-&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12    &trans  &trans          &trans     &trans    &trans        &to 0
-                        &trans  &trans  &trans     &trans  &trans          &trans
+                                &mo 0  &kp LEFT_SHIFT  &kp SPACE    &kp ENTER  &kp RALT  &kp ESC
             >;
         };
 
@@ -141,12 +105,48 @@
             >;
         };
 
-        qwerty {
+        accent_layer {
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y      &kp U     &kp I      &kp O    &kp P     &kp LBKT
-&kp TAB    &kp A  &kp S  &kp D     &kp F      &kp G        &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &to 0
-                         &kp LALT  &kp LCTRL  &kp ENTER    &kp SPACE  &kp BSPC  &mo 1
+&trans  &none  &none  &none     &none   &none     &none      &none    &none      &none      &none        &none
+&trans  &none  &none  &none     &none   &none     &kp GRAVE  &kp SQT  &kp CARET  &kp TILDE  &kp LS(SQT)  &none
+&trans  &none  &none  &cedilha  &none   &none     &none      &none    &none      &none      &none        &none
+                      &trans    &trans  &trans    &trans     &trans   &trans
+            >;
+        };
+
+        nav_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &bt BT_PRV  &bt BT_NXT    &kp LA(LEFT)  &kp LS(LC(TAB))  &kp LC(TAB)  &kp LA(RIGHT)  &trans      &trans
+&trans  &trans  &trans  &trans  &trans      &bt BT_CLR    &kp LEFT      &kp DOWN         &kp UP       &kp RIGHT      &trans      &trans
+&trans  &trans  &trans  &trans  &trans      &trans        &kp HOME      &kp PAGE_DOWN    &kp PAGE_UP  &kp END        &kp INSERT  &to 0
+                        &trans  &trans      &trans        &trans        &trans           &trans
+            >;
+        };
+
+        function_layer {
+            bindings = <
+&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10    &trans  &trans          &trans     &trans    &trans        &trans
+&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11    &trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI  &trans
+&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12    &trans  &trans          &trans     &trans    &trans        &to 0
+                        &trans  &trans  &trans     &trans  &trans          &trans
+            >;
+        };
+
+        media_layer {
+            bindings = <
+&to 0       &kp C_REWIND      &kp C_FF      &kp K_REDO           &kp K_UNDO    &trans             &kp AT_SIGN     &kp HASH          &kp ASTERISK          &kp DOLLAR             &kp AMPERSAND      &trans
+&trans      &kp C_BRI_DN      &kp C_BRI_UP  &mt C_MUTE C_VOL_DN  &kp C_VOL_UP  &kp PRINTSCREEN    &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE
+&kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &kp K_PASTE          &kp K_COPY    &kp K_CUT          &trans          &trans            &trans                &trans                 &trans             &trans
+                                            &trans               &trans        &trans             &trans          &trans            &trans
+            >;
+        };
+
+        num_layer {
+            bindings = <
+&none  &kp ASTERISK  &kp N7  &kp N8            &kp N9  &kp MINUS    &to 1   &trans           &trans     &trans    &trans        &trans
+&none  &kp SLASH     &kp N4  &kp N5            &kp N6  &kp PLUS     &to 6   &kp RIGHT_SHIFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI  &trans
+&none  &kp PERCENT   &kp N1  &kp N2            &kp N3  &kp EQUAL    &trans  &trans           &trans     &trans    &trans        &to 0
+                             &mt COMMA PERIOD  &kp N0  &trans       &trans  &trans           &trans
             >;
         };
     };
