@@ -98,10 +98,10 @@
 
         accent_layer {
             bindings = <
-&trans  &none  &none  &none   &none   &none     &none   &none   &none   &none   &none   &none
-&trans  &none  &none  &none   &none   &none     &trans  &trans  &trans  &trans  &trans  &none
-&trans  &none  &none  &trans  &none   &none     &none   &none   &none   &none   &none   &none
-                      &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &none  &none  &none   &none   &none     &none      &none    &none      &none      &none      &none
+&trans  &none  &none  &none   &none   &none     &kp GRAVE  &kp SQT  &kp CARET  &kp TILDE  &kp COLON  &none
+&trans  &none  &none  &none   &none   &none     &none      &none    &none      &none      &none      &none
+                      &trans  &trans  &trans    &trans     &trans   &trans
             >;
         };
 
